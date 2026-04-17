@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "env": {
+    "MPESA_SHORTCODE": "@mpesa_shortcode",
+    "MPESA_PASSKEY": "@mpesa_passkey",
+    "MPESA_CONSUMER_KEY": "@mpesa_consumer_key",
+    "MPESA_CONSUMER_SECRET": "@mpesa_consumer_secret",
+    "BINANCE_API_KEY": "@binance_api_key",
+    "BINANCE_SECRET": "@binance_secret",
+    "BINANCE_MERCHANT_ID": "@binance_merchant_id",
+    "OKX_API_KEY": "@okx_api_key",
+    "OKX_SECRET": "@okx_secret",
+    "OKX_PASSPHRASE": "@okx_passphrase",
+    "CRYPTO_WALLET_BTC": "@crypto_wallet_btc",
+    "CRYPTO_WALLET_ETH": "@crypto_wallet_eth",
+    "CRYPTO_WALLET_USDT": "@crypto_wallet_usdt"
+  }
+}
